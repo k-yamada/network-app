@@ -13,6 +13,7 @@ repositories {
 }
 
 dependencies {
+    implementation("io.ktor:ktor-network:1.5.2")
     testImplementation(kotlin("test-junit"))
 }
 
