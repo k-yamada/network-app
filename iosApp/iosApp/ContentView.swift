@@ -8,6 +8,10 @@ func greet() -> String {
 struct ContentView: View {
     var body: some View {
         Text(greet())
+            .onAppear() {
+                let client = UdpClient()
+                client.start()
+            }
     }
 }
 
