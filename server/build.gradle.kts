@@ -10,10 +10,13 @@ version = "1.0-SNAPSHOT"
 
 repositories {
     mavenCentral()
+    maven {
+        url = uri("https://maven.pkg.jetbrains.space/public/p/ktor/eap")
+    }
 }
 
 dependencies {
-    implementation("io.ktor:ktor-network:1.5.2")
+    implementation("io.ktor:ktor-network:1.6.0-eap-72")
     testImplementation(kotlin("test-junit"))
 }
 
