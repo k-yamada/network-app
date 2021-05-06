@@ -9,8 +9,15 @@
 import SwiftUI
 
 struct UdpClientView: View {
+    @StateObject var data = UdpClientData()
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack {
+            Text("UDP Client)
+        }
+        .onAppear() {
+            data.onAppear()
+        }
     }
 }
 

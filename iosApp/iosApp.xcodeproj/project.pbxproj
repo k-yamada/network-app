@@ -7,12 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		28B4C4FA2643D4FE0046789F /* UdpClientData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B4C4F92643D4FE0046789F /* UdpClientData.swift */; };
+		28B4C5022643D77D0046789F /* UdpClientGCDAsync.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B4C5012643D77D0046789F /* UdpClientGCDAsync.swift */; };
 		28BDB9F52639DCE100D2DB17 /* CocoaAsyncSocket in Frameworks */ = {isa = PBXBuildFile; productRef = 28BDB9F42639DCE100D2DB17 /* CocoaAsyncSocket */; };
 		28BDB9FA2639DE4100D2DB17 /* TcpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BDB9F92639DE4100D2DB17 /* TcpClient.swift */; };
 		28BDB9FF2639DEC200D2DB17 /* TcpClientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BDB9FE2639DEC200D2DB17 /* TcpClientView.swift */; };
 		28BDBA05263CB6A800D2DB17 /* TopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BDBA04263CB6A800D2DB17 /* TopView.swift */; };
 		28BDBA13263CB94A00D2DB17 /* UdpClientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BDBA12263CB94A00D2DB17 /* UdpClientView.swift */; };
-		28BF88112607D04D00D1ED20 /* UdpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BF88102607D04D00D1ED20 /* UdpClient.swift */; };
+		28BF88112607D04D00D1ED20 /* UdpClientNW.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BF88102607D04D00D1ED20 /* UdpClientNW.swift */; };
 		7555FF7F242A565900829871 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7555FF7E242A565900829871 /* AppDelegate.swift */; };
 		7555FF81242A565900829871 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7555FF80242A565900829871 /* SceneDelegate.swift */; };
 		7555FF83242A565900829871 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7555FF82242A565900829871 /* ContentView.swift */; };
@@ -57,11 +59,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		28B4C4F92643D4FE0046789F /* UdpClientData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UdpClientData.swift; sourceTree = "<group>"; };
+		28B4C5012643D77D0046789F /* UdpClientGCDAsync.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UdpClientGCDAsync.swift; sourceTree = "<group>"; };
 		28BDB9F92639DE4100D2DB17 /* TcpClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TcpClient.swift; sourceTree = "<group>"; };
 		28BDB9FE2639DEC200D2DB17 /* TcpClientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TcpClientView.swift; sourceTree = "<group>"; };
 		28BDBA04263CB6A800D2DB17 /* TopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopView.swift; sourceTree = "<group>"; };
 		28BDBA12263CB94A00D2DB17 /* UdpClientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UdpClientView.swift; sourceTree = "<group>"; };
-		28BF88102607D04D00D1ED20 /* UdpClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UdpClient.swift; sourceTree = "<group>"; };
+		28BF88102607D04D00D1ED20 /* UdpClientNW.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UdpClientNW.swift; sourceTree = "<group>"; };
 		7555FF7B242A565900829871 /* iosApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iosApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7555FF7E242A565900829871 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7555FF80242A565900829871 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -109,8 +113,9 @@
 		28BDB9F82639DE1000D2DB17 /* net */ = {
 			isa = PBXGroup;
 			children = (
-				28BF88102607D04D00D1ED20 /* UdpClient.swift */,
 				28BDB9F92639DE4100D2DB17 /* TcpClient.swift */,
+				28B4C5012643D77D0046789F /* UdpClientGCDAsync.swift */,
+				28BF88102607D04D00D1ED20 /* UdpClientNW.swift */,
 			);
 			path = net;
 			sourceTree = "<group>";
@@ -121,6 +126,7 @@
 				28BDB9FE2639DEC200D2DB17 /* TcpClientView.swift */,
 				28BDBA04263CB6A800D2DB17 /* TopView.swift */,
 				28BDBA12263CB94A00D2DB17 /* UdpClientView.swift */,
+				28B4C4F92643D4FE0046789F /* UdpClientData.swift */,
 			);
 			path = ui;
 			sourceTree = "<group>";
@@ -355,12 +361,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28B4C4FA2643D4FE0046789F /* UdpClientData.swift in Sources */,
 				28BDBA05263CB6A800D2DB17 /* TopView.swift in Sources */,
 				28BDBA13263CB94A00D2DB17 /* UdpClientView.swift in Sources */,
 				7555FF7F242A565900829871 /* AppDelegate.swift in Sources */,
+				28B4C5022643D77D0046789F /* UdpClientGCDAsync.swift in Sources */,
 				7555FF81242A565900829871 /* SceneDelegate.swift in Sources */,
 				28BDB9FA2639DE4100D2DB17 /* TcpClient.swift in Sources */,
-				28BF88112607D04D00D1ED20 /* UdpClient.swift in Sources */,
+				28BF88112607D04D00D1ED20 /* UdpClientNW.swift in Sources */,
 				7555FF83242A565900829871 /* ContentView.swift in Sources */,
 				28BDB9FF2639DEC200D2DB17 /* TcpClientView.swift in Sources */,
 			);
@@ -534,7 +542,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"iosApp/Preview Content\"";
-				DEVELOPMENT_TEAM = XLETXA9867;
+				DEVELOPMENT_TEAM = N46V7T38P5;
 				ENABLE_PREVIEWS = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../shared/build/xcode-frameworks";
 				INFOPLIST_FILE = iosApp/Info.plist;

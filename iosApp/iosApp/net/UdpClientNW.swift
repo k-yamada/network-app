@@ -1,5 +1,5 @@
 //
-//  UdpClient.swift
+//  UdpClientNW.swift
 //  iosApp
 //
 
@@ -7,12 +7,12 @@
 import Foundation
 import Network
 
-class UdpClient {
+class UdpClientNW {
     private var nwListener: NWListener!
     private let queue = DispatchQueue(label: "UdpClient")
 
-    func start() {
-        let nwPort = NWEndpoint.Port(rawValue: 2323)!
+    func bind(port: Int) {
+        let nwPort = NWEndpoint.Port(rawValue: UInt16(port))!
         let listener = try! NWListener(using: .udp, on: nwPort)
         nwListener = listener
         listener.newConnectionHandler = { [unowned self] (connection: NWConnection) in
